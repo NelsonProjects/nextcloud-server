@@ -1,0 +1,15 @@
+# Systemd user service
+# Runs the backup script automatically at login
+# Used to trigger the Nextcloud incremental backup workflow
+
+[Unit]
+Description=Nextcloud Incremental Backup at Login
+After=default.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/sleep 60
+ExecStart=/home/USER/login-backup.sh
+
+[Install]
+WantedBy=default.target
