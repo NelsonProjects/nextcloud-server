@@ -9,7 +9,7 @@ After=default.target
 [Service]
 Type=oneshot
 ExecStart=/usr/bin/sleep 60
-ExecStart=/home/USER/login-backup.sh
+ExecStart=%h/login-backup.sh
 
 [Install]
 WantedBy=default.target
